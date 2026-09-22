@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herman Miller Store</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="shortcut icon" href="./images/symbol_red.png" type="image/x-icon">
+    <script src="./scripts/index.js" defer></script>
+</head>
+<body>
+    <style>
+::-webkit-scrollbar {
+    width: 5px;   /* 세로 스크롤바 두께 */
+    height: 5px;  /* 가로 스크롤바 두께 */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* 트랙 배경색 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark); /* 원하시는 손잡이 색상으로 변경 가능 */
+    border-radius: 10px; /* 둥근 알약 모양 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--point);
+}
+    </style>
+    <!-- ============ HEADER ============ -->
+    <header class="topbar">
+        <div class="left">
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="메뉴 열기">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+            </button>
+            <button class="icon-btn" aria-label="Search"><img src="./images/icons/search.png" alt=""></button>
+        </div>
+        
+        <a href="./index.html" class="logo"><img src="./images/logo.png" alt="logo"></a>
+        
+        <div class="right">
+            <a href="#" class="nav-icon" aria-label="Account"><img src="./images/icons/acount.png" alt=""></a>
+            <a href="#" class="nav-icon" aria-label="Wishlist"><img src="./images/icons/wish_nav.png" alt=""></a>
+            <a href="#" class="nav-icon" aria-label="Cart"><img src="./images/icons/cart.png" alt=""></a>
+        </div>
+    </header>
+    <!-- ============ FULL NAV OVERLAY ============ -->
+    <div class="nav-overlay" id="navOverlay">
+        <div class="nav-overlay-body">
+            <ul class="nav-cat-list" id="navCatList">
+                <span class="nav-cat-dot" id="navCatDot"></span>
+                <li data-cat="living" class="active">Living Room</li>
+                <li data-cat="dining">Dining</li>
+                <li data-cat="lighting">Lighting</li>
+                <li data-cat="eames">Eames</li>
+                <li data-cat="office">Office</li>
+                <li data-cat="gaming">Gaming</li>
+                <li data-cat="decor">Decor</li>
+                <li data-cat="sale">Sale</li>
+            </ul>
+        
+            <ul class="nav-sub-list" id="navSubList"></ul>
+        
+            <a href="#" class="nav-feature">
+                <div class="nav-feature-img"><img src="" alt=""></div>
+                <p id="navFeatureCaption"></p>
+            </a>
+        </div>
+    </div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+    <!-- 좌측 -->
+    <div class="hero-symbol">
+        <div class="hero-slides" id="heroSlides">
+            <div class="hero-slide active" data-slide="0"></div>
+            <div class="hero-slide" data-slide="1"></div>
+            <div class="hero-slide" data-slide="2"></div>
+        </div>
+        <p class="hero-vector"><img src="./images/Vector_hero.png" alt=""></p>
+        <div class="hero-symbol-label"><img src="./images/logo_hero_red.png" alt="logo"></div>
+    </div>
+    <!-- 우측 -->
+    <div class="hero-right">
+        <div class="hero-top">
+            <div>HERMANMILLER<br>SINCE 1923</div>
+            <div>FOUNDED BY<br>D.J. DE PREE</div>
+            <p><img src="./images/symbol_white.png" alt="symbol"></p>
+        </div>
+        <div class="hero-bottom-group">
+            <div class="hero-btm">
+                <div>the power of design<br>To make things better</div>
+                <div>furniture from herman miller<br>Curated for a room that means it.</div>
+            </div>
+            <div class="hero-logo"><img src="./images/logo_hero.png" alt=""></div>
+        </div>
+    </div>
+    <!-- 세로 슬라이더 -->
+    <div class="hero-slider" id="heroSlider">
+        <div class="slidebar-seg"><div class="fill" data-seg="0"></div></div>
+        <div class="slidebar-seg"><div class="fill" data-seg="1"></div></div>
+        <div class="slidebar-seg"><div class="fill" data-seg="2"></div></div>
+    </div>
+</section>
+
+<!-- ============ BESTSELLERS ============ -->
+<section class="bs-wraps">
+    <h2 class="title">Bestsellers</h2>
+    <div class="best-grid">
+        <ul class="tab-list" id="tabList">
+            <span class="tab-dot" id="tabDot"></span>
+            <li data-tab="office">Office Chairs</li>
+            <li data-tab="lounge">Lounge Chairs &amp; Ottomans</li>
+            <li data-tab="coffee" class="active">Coffee Tables</li>
+            <li data-tab="dining">Dining</li>
+            <li data-tab="desks">Desks</li>
+            <li data-tab="gaming">Gaming Chairs</li>
+            <li data-tab="storage">Storage</li>
+            <li data-tab="decor">Decor</li>
+        </ul>
+        <div class="product-grid" id="bestsellerGrid"></div>
+    </div>
+</section>
+
+<!-- ============ MD'S PICK ============ -->
+<section class="wrap mdpick-wrap">
+    <div class="mdpick-grid">
+        <!-- 좌측 BIG 영역 -->
+        <div class="mdpick-feature">
+            <!-- 1. 상단 타이틀 (우측 1행 카드 윗선 정렬) -->
+            <h2 class="title">MD's pick</h2>
+            
+            <!-- 2. 중앙 이미지 (자연스럽게 중앙 배치) -->
+            <div class="product-thumb">
+                <img src="./images/md/big.png" alt="Eames Aluminum Group Lounge Chair">
+            </div>
+            
+            <!-- 우측 product-card와 완전히 동일한 구조로 -->
+            <div class="product-card-info">
+                <!-- <p class="heart-btn-wrap"><button class="heart-btn" aria-label="wishlist"><img src="./images/icons/heart.png" alt=""></button></p> -->
+                <div class="product-name">EAMES ALUMINUM GROUP LOUNGE CHAIR</div>
+                <div class="product-price-bf">$695.00 - $890.00</div>
+                <div class="product-price">$521.25 - $667.50</div>
+                <div class="sale-badge">25% off</div>
+            </div>
+        </div>
+        <!-- 우측 상품 리스트 -->
+        <div class="mdpick-list" id="mdPickList"></div>
+    </div>
+</section>
+<!-- ============ COLLECTION ============ -->
+<section class="collection-section">
+    <h2 class="title">Collection</h2>
+    <div class="collection-container">
+        <!-- 메인 인테리어 이미지 및 핫스팟 영역 -->
+        <div class="main-image-wrap" id="hotspotArea">
+            <button type="button" class="hotspot" data-id="1">1</button>
+            <button type="button" class="hotspot" data-id="2">2</button>
+            <button type="button" class="hotspot" data-id="3">3</button>
+            <button type="button" class="hotspot" data-id="4">4</button>
+            <button type="button" class="hotspot active" data-id="5">5</button>
+        </div>
+
+        <!-- 우측 상세 정보 카드 -->
+        <div class="collection-card">
+            <!-- [상단 영역] 사진 + 양옆 화살표 + 좌측하단 큰 번호 -->
+            <a class="card-top" href="#info">
+                <button type="button" class="nav-btn prev-btn" aria-label="prev"><img src="./images/icons/left.png" alt="prev"></button>
+                <p class="card-image">
+                    <img src="./images/collection/chair.png" alt="Eames Molded Plywood">
+                </p>
+                <button type="button" class="nav-btn next-btn" aria-label="next"><img src="./images/icons/right.png" alt="next"></button>
+                
+                <!-- 이미지 좌측 하단에 들어가는 포인트 번호 -->
+                <span id="card-num" class="product-num">05</span>
+            </a>
+            <!-- [하단 영역] 제품명 + 표 -->
+            <div class="card-bottom">
+                <h3 id="card-name" class="product-name">EAMES MOLDED PLYWOOD</h3>
+                <table class="product-spec">
+                    <tr>
+                        <th>Material</th>
+                        <td id="card-material">Walnut veneer, molded plywood</td>
+                    </tr>
+                    <tr>
+                        <th>Year</th>
+                        <td id="card-year">1946</td>
+                    </tr>
+                    <tr>
+                        <th>Designer</th>
+                        <td id="card-designer">Charles & Ray Eames</td>
+                    </tr>
+                    <tr>
+                        <th>Price</th>
+                        <td id="card-price">
+                        <span class="sale-price">$1,895</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ============ NEW IN ============ -->
+<section class="wrap newin-wrap">
+    <h2 class="title">New In</h2>
+    <div class="newin-row-wrap">
+        <!-- 좌우 화살표 버튼 (카드 상단 위치) -->
+        <button class="newin-arrow prev" id="newInPrev" aria-label="Previous">
+            <img src="./images/icons/left_white.png" alt="Prev">
+        </button>
+        <button class="newin-arrow next" id="newInNext" aria-label="Next">
+            <img src="./images/icons/right_white.png" alt="Next">
+        </button>
+
+        <div class="newin-row" id="newInRow">
+            <!-- JS dynamic product cards -->
+        </div>
+    </div>
+
+    <!-- 2단계 프로그레스 슬라이드 바 -->
+    <div class="newin-track">
+        <div class="newin-bar" id="newInBar"></div>
+    </div>
+</section>
+<!-- ============ CATEGORY ============ -->
+<section class="wrap category-wrap">
+    <div class="category-grid">
+        <!-- 윗줄 3개 (2열, 3열, 5열 위치에 배치) -->
+        <a href="#" class="category-item item-living">
+            <img src="./images/category/living.jpg" alt="Living Room">
+            <span class="category-name">Living Room</span>
+        </a>
+        <a href="#" class="category-item item-dining">
+            <img src="./images/category/dining.jpg" alt="Dining">
+            <span class="category-name">Dining</span>
+        </a>
+        <a href="#" class="category-item item-office">
+            <img src="./images/category/office.jpg" alt="Office">
+            <span class="category-name">Office</span>
+        </a>
+
+        <!-- 아랫줄 타이틀 (1열 / 2행에 위치해 수평 유지) -->
+        <h2 class="title">Category</h2>
+
+        <!-- 아랫줄 2개 (3열, 4열 위치에 배치) -->
+        <a href="#" class="category-item item-decor">
+            <img src="./images/category/decor.jpg" alt="Decor">
+            <span class="category-name">Decor</span>
+        </a>
+        <a href="#" class="category-item item-lighting">
+            <img src="./images/category/lighting.jpg" alt="Lighting">
+            <span class="category-name">Lighting</span>
+        </a>
+    </div>
+</section>
+<!-- ============ DESIGNER + HERITAGE ============ -->
+<section class="heritage-section-wrap">
+    <!-- POPULAR DESIGNERS -->
+    <div class="wrap designers-wrap">
+        <h2 class="title" style="margin-bottom:0;">Popular<br>Designers</h2>
+        <div class="designers-list">
+            <div class="designer">
+                <div class="designer-photo">
+                    <img src="./images/RayEames.jpg" alt="Charles & Ray Eames">
+                    <div class="designer-overlay">Explore</div>
+                </div>
+                <div class="designer-name">Charles &amp;<br>Ray Eames</div>
+            </div>
+            <div class="designer">
+                <div class="designer-photo">
+                    <img src="./images/Alexander.jpg" alt="Alexander Girard">
+                    <div class="designer-overlay">Explore</div>
+                </div>
+                <div class="designer-name">Alexander<br>Girard</div>
+            </div>
+            <div class="designer">
+                <div class="designer-photo">
+                    <img src="./images/George.jpg" alt="George Nelson">
+                    <div class="designer-overlay">Explore</div>
+                </div>
+                <div class="designer-name">George<br>Nelson</div>
+            </div>
+            <div class="designer">
+                <div class="designer-photo">
+                    <img src="./images/Isamu.jpg" alt="Isamu Noguchi">
+                    <div class="designer-overlay">Explore</div>
+                </div>
+                <div class="designer-name">Isamu<br>Noguchi</div>
+            </div>
+        </div>
+    </div>
+    <!-- HERITAGE -->
+    <div class="heritage-grid">
+        <div class="heritage-photo"><img src="./images/heritage.jpg" alt="heritage"></div>
+        <div class="heritage-copy">
+            <h2 class="title" style="margin-bottom:0;">Heritage</h2>
+            <div class="copy-text">
+                <p>At Herman Miller, we believe in the power of design to make things better for people.</p>
+                <p>For over a century, a handful of designers shaped not just Herman Miller, but modern life itself. These pieces weren't designed to trend. They were designed to last.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ============ THE STANDARD ============ -->
+<section class="wrap">
+    <div class="standard-grid">
+        <h2 class="title">The standard</h2>
+        <div class="standard-list">
+            <dl>
+                <div class="standard-row">
+                    <span class="label">Warranty</span>
+                    <div class="standard-right">
+                        <span class="value">Up to 12 years. Buy with confidence.</span>
+                        <span class="arrow">
+                            <img src="./images/icons/arrow.png" alt="arrow" class="arrow-icon">
+                            <img src="./images/icons/arrow_red.png" alt="arrow" class="arrow-icon hover-icon">
+                        </span>
+                    </div>
+                </div>
+                <div class="standard-row">
+                    <span class="label">Returns</span>
+                    <div class="standard-right">
+                        <span class="value">30-day returns, no questions asked.</span>
+                        <span class="arrow">
+                            <img src="./images/icons/arrow.png" alt="arrow" class="arrow-icon">
+                            <img src="./images/icons/arrow_red.png" alt="arrow" class="arrow-icon hover-icon">
+                        </span>
+                    </div>
+                </div>
+                <div class="standard-row">
+                    <span class="label">Design Services</span>
+                    <div class="standard-right">
+                        <span class="value">Complimentary, from our in-house team.</span>
+                        <span class="arrow">
+                            <img src="./images/icons/arrow.png" alt="arrow" class="arrow-icon">
+                            <img src="./images/icons/arrow_red.png" alt="arrow" class="arrow-icon hover-icon">
+                        </span>
+                    </div>
+                </div>
+                <div class="standard-row">
+                    <span class="label">Authenticity</span>
+                    <div class="standard-right">
+                        <span class="value">Guaranteed original. Sourced, not replicated.</span>
+                        <span class="arrow">
+                            <img src="./images/icons/arrow.png" alt="arrow" class="arrow-icon">
+                            <img src="./images/icons/arrow_red.png" alt="arrow" class="arrow-icon hover-icon">
+                        </span>
+                    </div>
+                </div>
+            </dl>
+        </div>
+        <div class="standard-photo">
+            <img src="./images/standard.jpg" alt="The standard chairs">
+        </div>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div>
+                <h4>Newsletter — Sign Up</h4>
+                <p>Be the first to know about Herman Miller special offers, new product launches, and events.</p>
+                <form class="newsletter-form" onsubmit="return false;">
+                <input type="email" placeholder="yourname@example.com">
+                <button type="submit">Sign Up</button>
+                </form>
+                <div class="footer-social">
+                    <a href="#"><img src="./images/icons/insta.png" alt=""></a>
+                    <a href="#"><img src="./images/icons/facebook.png" alt=""></a>
+                    <a href="#"><img src="./images/icons/pinterest.png" alt=""></a>
+                    <a href="#"><img src="./images/icons/youtube.png" alt=""></a>
+                    <a href="#"><img src="./images/icons/twitter.png" alt=""></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                <li><a href="#">Living Room</a></li>
+                <li><a href="#">Dining</a></li>
+                <li><a href="#">Lighting</a></li>
+                <li><a href="#">Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Designers</a></li>
+                <li><a href="#">Our Collections</a></li>
+                <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Shipping &amp; Returns</a></li>
+                <li><a href="#">Warranty</a></li>
+                <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo"><img src="./images/logo_footer.png" alt="logo"></div>
+            <span>© 2026 Herman Miller — Redesign Concept</span>
+            <span>Privacy Notice</span>
+            <span>Terms of Sale</span>
+            <span>Cookie Settings</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
