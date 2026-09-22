@@ -258,8 +258,8 @@ const mdPickData = [
 const roomProducts = [
     {num:"01", name:"Eames Lounge Chair and Ottoman", material:"Walnut veneer, leather", year:"1956", designer:"Charles & Ray Eames", price:"$6,745.00", img: "./images/collection/ottoman.png", x:12, y:45},
     {num:"02", name:"Noguchi Table", material:"Glass, walnut", year:"1948", designer:"Isamu Noguchi", price:"$2,171.25", img: "./images/collection/noguchi.png", x:46, y:60},
-    {num:"03", name:"Nelson Pear Lotus Table Lamp", material:"Steel, styrene shade", year:"1947", designer:"George Nelson", price:"$465.00", img: "./images/collection/chair.png", x:25, y:27},
-    {num:"04", name:"Nelson Face Print", material:"Paper, wood frame", year:"1979", designer:"Nelson", price:"$120.00", img: "./images/collection/chair.png", x:35, y:7},
+    {num:"03", name:"Nelson Pear Lotus Table Lamp", material:"Steel, styrene shade", year:"1947", designer:"George Nelson", price:"$465.00", img: "./images/collection/lamp.png", x:25, y:27},
+    {num:"04", name:"Nelson Face Print", material:"Paper, wood frame", year:"1979", designer:"Nelson", price:"$120.00", img: "./images/collection/nelson.png", x:35, y:7},
     {num:"05", name:"Eames Molded Plywood Lounge Chair", material:"Walnut veneer, molded plywood", year:"1946", designer:"Charles & Ray Eames", price:"$1,895.00", img: "./images/collection/chair.png", x:60, y:38}
 ];
 let currentCollectionIndex = 0; // 현재 선택된 상품 인덱스 저장
