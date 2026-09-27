@@ -330,7 +330,6 @@ html, body {
 /* ---------- BESTSELLERS ---------- */
 .bs-wraps{
     padding: var(--padding-tb) 0;
-    height: 743px;
 }
 .bs-wraps h2 {
     padding-left: 34.375rem;
@@ -372,6 +371,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex: 1;
     width: 100%;
     min-width: 0;
 
@@ -470,29 +470,38 @@ html, body {
     display:flex;
     flex-direction:column;
     justify-content: space-between;
-    height: 100%;
-    /* min-height: 0; */
+    max-height: 650px;
 }
 .mdpick-feature .title{ font-size: var(--title-m); flex-shrink:0; }
 .mdpick-feature .product-thumb{
     flex: 1;
-    max-height: none;
+    background: none;
+    min-height: 0;
+    /* max-height: 453px; */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: none;
     /* padding: 25px 0; */
 }
 .mdpick-feature .product-card-info { margin-top: 12px; text-align: right; flex-shrink:0;}
 .mdpick-feature .product-card-info * {margin-bottom: 6px;}
 .mdpick-feature .product-card-info .product-name { text-align: left; }
 
-
-.mdpick-feature .product-thumb img {
+.mdpick-feature .product-thumb{
+    flex: 1;
+    background: none;
+    min-height: 0;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    display: flex;
+    align-items: flex-end;   /* center → flex-end */
+    justify-content: center;
+    padding: 1rem;
+}
+.mdpick-feature .product-thumb img {
+    max-width: 100%;
+    /* height: 600px !important; */
+    object-fit:contain;
     display: block;
 }
 
@@ -516,6 +525,9 @@ html, body {
 .mdpick-list {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-rows: auto;      /* 행은 콘텐츠 크기만큼만 */
+    align-content: start;      /* 전체 행 세트가 안 늘어나게 */
+    align-items: stretch;        /* 각 셀도 안 늘어나게 */
     gap: 24px 20px;
     width: 100%;
 }
@@ -553,10 +565,10 @@ html, body {
     width: fit-content;
 }
 
-@media (max-width:900px){
+/* @media (max-width:900px){
     .mdpick-grid{ grid-template-columns:1fr; }
     .mdpick-list{ grid-template-columns:repeat(2,1fr); }
-}
+} */
 
 /* ---------- COLLECTION ---------- */
 .collection-section {

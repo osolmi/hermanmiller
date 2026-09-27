@@ -322,7 +322,6 @@ function renderMdPick() {
         </div>
     `).join('');
 }
-
 // ======================== NEW IN SLIDER LOGIC ========================
 
 // 1. 단일화된 상품 카드 HTML 생성 함수 (.product-thumb 및 데이터 연동 discount 적용)
