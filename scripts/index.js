@@ -62,7 +62,6 @@ function openNav(){
     hamburgerBtn.classList.add('open');
     navOverlay.classList.add('open');
     document.body.style.overflow = 'hidden';
-    // 오버레이가 보이게 된 후 dot 위치 재계산 (숨김 상태에서는 offsetTop이 0으로 잡히므로)
     requestAnimationFrame(() => {
     const activeCatLi = navCatList.querySelector('li.active');
     if (activeCatLi) moveNavCatDot(activeCatLi);

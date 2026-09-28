@@ -470,7 +470,7 @@ html, body {
     display:flex;
     flex-direction:column;
     justify-content: space-between;
-    max-height: 650px;
+    max-height: 87.4vh;
 }
 .mdpick-feature .title{ font-size: var(--title-m); flex-shrink:0; }
 .mdpick-feature .product-thumb{
