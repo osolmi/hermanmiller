@@ -950,7 +950,7 @@ html, body {
 }
 .designer:hover .designer-overlay{ opacity:0.93; }
 .designer-name{ font-size:1.25rem; font-weight:600; color: var(--dark); text-align: center;}
-
+.designer:hover .designer-name{color: var(--point);}
 /* ---------- HERITAGE ---------- */
 .heritage-grid {
     display: flex;
