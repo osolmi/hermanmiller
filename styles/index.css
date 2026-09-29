@@ -34,7 +34,8 @@ html, body {
 }
 /* ---------- header(sticky) ---------- */
 .topbar{
-    position:sticky;
+    position:fixed;
+    width: 100%;
     top:0;
     z-index:9999;                 /* nav-overlay(100)보다 항상 위 */
     background:#fff;
@@ -185,6 +186,7 @@ html, body {
 
 /* ---------- HERO ---------- */
 .hero{
+    padding-top: 57px;
     display: flex;
     position:relative;
     width:100%;
