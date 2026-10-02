@@ -151,10 +151,10 @@ const bestsellerData = {
         {name:"Cosm Chair", price:"$$1,585.00 - $2,060.00", img:"./images/bs/office_4.png"}
     ],
     lounge:  [
-        {name:"Eames Lounge Chair and Ottoman", price:"$6,745.00 - $8,996.25"},
-        {name:"Eames Molded Plywood Lounge Chair", price:"$1,421.25 - $1,795.00"},
-        {name:"Eames Lounge Chair", price:"$995.00 - $1,325.00"},
-        {name:"Eames Aluminum Group Lounge Chair", price:"$521.25 - $667.50"}
+        {name:"Eames Lounge Chair and Ottoman", price:"$6,745.00 - $8,996.25", img:"./images/bs/lounge_1.png"},
+        {name:"Eames Molded Plywood Lounge Chair", price:"$1,421.25 - $1,795.00", img:"./images/bs/lounge_2.png"},
+        {name:"Eames Lounge Chair", price:"$995.00 - $1,325.00", img:"./images/bs/lounge_3.png"},
+        {name:"Eames Aluminum Group Lounge Chair", price:"$521.25 - $667.50", img:"./images/bs/lounge_4.png"}
     ],
     coffee:  [
         {name:"Noguchi Table", originalPrice: "$2,895.00 - $3,195.00", price:"$2,171.25 - $2,396.25", discount: "25% off", img:"./images/bs/coffee_1.png"},
@@ -163,10 +163,10 @@ const bestsellerData = {
         {name:"Eames Elliptical Table", originalPrice: "$1,435.00 - $2,830.00", price:"$1,076.25 - $2,122.50", discount: "25% off", img:"./images/bs/coffee_4.png"}
     ],
     dining:  [
-        {name:"Eames Molded Plywood Dining Chair", price:"$521.25 - $667.50"},
-        {name:"Eames Table, Rectangular", price:"$1,895.00 - $2,995.00"},
-        {name:"Eames Wire Chair", price:"$521.25 - $667.50"},
-        {name:"Nelson Swag Leg Table", price:"$1,495.00 - $2,195.00"}
+        {name:"Eames Molded Plywood Dining Chair", price:"$521.25 - $667.50", img:"./images/bs/dining_1.png"},
+        {name:"Eames Table, Rectangular", price:"$1,895.00 - $2,995.00", img:"./images/bs/dining_2.png"},
+        {name:"Eames Wire Chair", price:"$521.25 - $667.50", img:"./images/bs/dining_3.png"},
+        {name:"Nelson Swag Leg Table", price:"$1,495.00 - $2,195.00", img:"./images/bs/dining_4.png"}
     ],
     desks:   [
         {name:"Eames Desk Unit", price:"$1,560.00 - $1,890.00"},
