@@ -205,7 +205,7 @@ const bestsellerData = {
 function renderBestsellers(key){
     if (!bestsellerData[key]) return;
     bestsellerGrid.innerHTML = bestsellerData[key].map(p => `
-        <div class="product-card">
+        <a href="#shop" class="product-card">
             <div class="product-thumb">
                 <img src="${p.img}" alt="${p.name}" class="product-img">
                 <p class="heart"><img src="./images/icons/wish.png" alt="wish"></p>
@@ -218,7 +218,7 @@ function renderBestsellers(key){
                     ${p.discount ? `<span class="sale-badge">${p.discount}</span>` : ''}
                 </div>
             </div>
-        </div>
+        </a>
     `).join('');
 }
         //
@@ -277,7 +277,7 @@ const newInData = [
 function createProductCardHTML(item) {
     const hasDiscount = Boolean(item.originalPrice);
     return `
-        <div class="product-card">
+        <a href="#shop" class="product-card">
             <div class="product-thumb">
                 <img src="${item.img}" alt="${item.name}">
                 <button class="heart" aria-label="Wishlist">
@@ -294,7 +294,7 @@ function createProductCardHTML(item) {
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
     `;
 }
 
@@ -305,7 +305,7 @@ function renderMdPick() {
     if (!mdPickList) return;
 
     mdPickList.innerHTML = mdPickData.map(p => `
-        <div class="product-card">
+        <a href="#shop" class="product-card">
             <div class="product-thumb">
                 <img src="${p.img}" alt="${p.name}" class="product-img">
                 <p class="heart"><img src="./images/icons/wish.png" alt="wish"></p>
@@ -318,7 +318,7 @@ function renderMdPick() {
                     ${p.discount ? `<span class="sale-badge">${p.discount}</span>` : ''}
                 </div>
             </div>
-        </div>
+        </a>
     `).join('');
 }
 // ======================== NEW IN SLIDER LOGIC ========================
@@ -327,7 +327,7 @@ function renderMdPick() {
 // New In 영역에서 사용하는 상품 카드 생성 함수
 function createProductCardHTML(item) {
     return `
-        <div class="product-card">
+        <a href="#shop" class="product-card">
             <div class="product-thumb">
                 <img src="${item.img}" alt="${item.name}" class="product-img">
                 <button class="heart" aria-label="Wishlist">
@@ -342,7 +342,7 @@ function createProductCardHTML(item) {
                     ${item.discount ? `<span class="sale-badge">${item.discount}</span>` : ''}
                 </div>
             </div>
-        </div>
+        </a>
     `;
 }
 
