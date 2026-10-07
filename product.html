@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eames Molded Plywood Lounge Chair Wood Base (LCW) — Herman Miller</title>
+<link rel="shortcut icon" href="./images/symbol_red.png" type="image/x-icon">
+<link rel="stylesheet" href="./styles/reset.css">
+<link rel="stylesheet" href="./styles/index.css">
+<link rel="stylesheet" href="./styles/product.css">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<script src="./scripts/index.js" defer></script>
+<script src="./scripts/product.js" defer></script>
+</head>
+<body>
+    <!-- ============ HEADER ============ -->
+    <header class="topbar">
+        <div class="left">
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="메뉴 열기">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+            </button>
+            <button class="icon-btn" aria-label="Search"><img src="./images/icons/search.png" alt=""></button>
+        </div>
+        
+        <a href="./index.html" class="logo"><img src="./images/logo.png" alt="logo"></a>
+        
+        <div class="right">
+            <a href="#" class="nav-icon" aria-label="Account"><img src="./images/icons/acount.png" alt=""></a>
+            <a href="#" class="nav-icon" aria-label="Wishlist"><img src="./images/icons/wish_nav.png" alt=""></a>
+            <a href="#" class="nav-icon" aria-label="Cart"><img src="./images/icons/cart.png" alt=""></a>
+        </div>
+    </header>
+    <!-- ============ FULL NAV OVERLAY ============ -->
+    <div class="nav-overlay" id="navOverlay">
+        <div class="nav-overlay-body">
+            <ul class="nav-cat-list" id="navCatList">
+                <span class="nav-cat-dot" id="navCatDot"></span>
+                <li data-cat="living" class="active">Living Room</li>
+                <li data-cat="dining">Dining</li>
+                <li data-cat="lighting">Lighting</li>
+                <li data-cat="eames">Eames</li>
+                <li data-cat="office">Office</li>
+                <li data-cat="gaming">Gaming</li>
+                <li data-cat="decor">Decor</li>
+                <li data-cat="sale">Sale</li>
+            </ul>
+        
+            <ul class="nav-sub-list" id="navSubList"></ul>
+        
+            <a href="#" class="nav-feature">
+                <div class="nav-feature-img"><img src="" alt=""></div>
+                <p id="navFeatureCaption"></p>
+            </a>
+        </div>
+    </div>
+    
+    <main class="pdp">
+    
+    <nav class="pdp-crumb" aria-label="breadcrumb">
+        <a href="#">Living Room</a><span>></span><a href="#">Lounge Chairs &amp; Ottomans</a>
+    </nav>
+    
+    <!-- 1. 히어로: 3D 고정 스테이지(드래그=회전) + 우측 블리드 스트립(드래그=가로 스크롤) -->
+    <div class="pdp-hero">
+        <div class="pdp-stage">
+            <model-viewer src="./images/product/lcw.glb" poster="./images/product/lcw_01.png"
+            alt="Eames Molded Plywood Lounge Chair Wood Base 3D"
+            camera-controls touch-action="pan-y"
+            interaction-prompt="auto" shadow-intensity="1"
+            loading="lazy" reveal="interaction"></model-viewer>
+        </div>
+        <div class="pdp-strip">
+            <div class="pdp-slide"><img src="./images/product/lcw_01.png" alt="Eames LCW in a living room"></div>
+            <div class="pdp-slide"><img src="./images/product/lcw_02.jpg" alt="Eames LCW close-up with objects"></div>
+            <div class="pdp-slide"><img src="./images/product/lcw_03.jpg" alt="Eames LCW scale"></div>
+            <div class="pdp-slide"><img src="./images/product/lcw_04.jpg" alt="Eames LCW interior"></div>
+        </div>
+    </div>
+    
+    <!-- 2. 제품명 / 가격 / 구매 -->
+    <section class="pdp-buy">
+        <h1 class="title pdp-name">Eames Molded Plywood Lounge Chair Wood Base (LCW)</h1>
+        <p class="pdp-price">$2,575.00</p>
+        <div class="pdp-actions">
+            <div class="pdp-qty">
+                <button type="button" aria-label="수량 감소">-</button>
+                <output>1</output>
+                <button type="button" aria-label="수량 증가">+</button>
+            </div>
+            <button type="button" class="pdp-cart">Add to Cart</button>
+        </div>
+    </section>
+    
+    <!-- 3. Description -->
+    <section class="pdp-sec pdp-2col">
+        <div>
+            <h2 class="title pdp-h">Description</h2>
+            <div class="pdp-portrait"><img src="./images/RayEames.jpg" alt="Charles and Ray Eames"></div>
+        </div>
+        <div class="pdp-text">
+            <p>Honored by Time magazine as the Best Design of the 20th Century, this molded plywood chair began as an experiment, created via a machine that molded plywood with the help of heat and a bicycle pump.</p>
+            <p>Today, the low-slung chair features an expertly crafted molded seat and back that cradles you in comfort. To echo the editors of Time, the Eames molded plywood lounge chair is "something elegant, light, and comfortable. Much copied, but never bettered."</p>
+            <p>This timeless wood lounge chair is available in three woodgrains and two solid stains that are sure to make a style statement.</p>
+        </div>
+    </section>
+    
+    <!-- 4. Dimensions -->
+    <section class="pdp-sec pdp-2col">
+        <div>
+            <h2 class="title pdp-h">Dimensions</h2>
+            <img class="pdp-draw" src="images/lcw_drawing.svg" alt="LCW dimension drawing">
+        </div>
+        <table class="product-spec pdp-spec">
+            <tr><th scope="row">Height</th><td>26¼</td></tr>
+            <tr><th scope="row">Width</th><td>22</td></tr>
+            <tr><th scope="row">Depth</th><td>25</td></tr>
+            <tr><th scope="row">Seat Height</th><td>19</td></tr>
+            <tr><th scope="row">Weight (lbs)</th><td>20</td></tr>
+            <tr><th scope="row">Capacity (lbs)</th><td>240</td></tr>
+        </table>
+    </section>
+    
+    <!-- 5. Design Details -->
+    <section class="pdp-sec pdp-dd-sec">
+        <h2 class="title pdp-h">Design Details</h2>
+        <div class="pdp-dd">
+        <figure class="big">
+            <div class="ph"><img src="images/product/detail_01.jpg" alt=""></div>
+            <figcaption><b>01</b>Gently curved plywood cradles you as you sit.</figcaption>
+        </figure>
+        <figure>
+            <div class="ph"><img src="images/product/detail_02.jpg" alt=""></div>
+            <figcaption><b>02</b>Rubber shock mounts buffer against jarring movement.</figcaption>
+        </figure>
+        <figure>
+            <div class="ph"><img src="images/product/detail_03.jpg" alt=""></div>
+            <figcaption><b>03</b>Upholstered seat optional.</figcaption>
+        </figure>
+        <figure>
+            <div class="ph"><img src="images/product/detail_04.jpg" alt=""></div>
+            <figcaption><b>04</b>Available in two solid stains and three woodgrains to suit your style.</figcaption>
+        </figure>
+        </div>
+    </section>
+    
+    <!-- 6. Introducing -->
+    <section class="pdp-sec pdp-intro">
+        <div class="pdp-intro-copy">
+        <h2 class="title pdp-h">Introducing</h2>
+        <div class="pdp-intro-body">
+            <h3 class="title">Yellow light</h3>
+            <p>First specified by Charles Eames following a 1946 exhibition at the Museum of Modern Art, this all-over ochre Molded Plywood Lounge Chair is saturated in color without diminishing the natural grain. Now, decades after its original introduction, this brilliant vision is ready for life in your home.</p>
+        </div>
+        </div>
+        <div class="pdp-intro-img"><img src="images/product/lcw_yellow.jpg" alt="Yellow LCW in a room"></div>
+    </section>
+    
+    <!-- 7. Rating & Reviews -->
+    <section class="pdp-sec">
+        <h2 class="title pdp-h">Rating &amp; Reviews</h2>
+        <div class="pdp-rev">
+            <div class="pdp-score">
+                <div>
+                <p><b>4.6</b><span>/5</span></p>
+                <small>76 Reviews</small>
+                </div>
+                <ul class="pdp-bars" aria-label="별점 분포">
+                <li>5<i style="--w:80%"></i></li>
+                <li>4<i style="--w:12%"></i></li>
+                <li>3<i style="--w:5%"></i></li>
+                <li>2<i style="--w:2%"></i></li>
+                <li>1<i style="--w:1%"></i></li>
+                </ul>
+            </div>
+            <div class="pdp-rev-wrap">
+                <article class="pdp-review">
+                    <div>
+                        <p class="stars" aria-label="5 stars">★★★★★</p>
+                        <h3>Surprisingly comfortable</h3>
+                        <p>This chair has to be the most comfortable ever. Such a simple design of molded plywood and yet you feel supported and relaxed. It is always such a privilege to have an Eames' design in the home.</p>
+                    </div>
+                    <img src="images/product/review_01.jpg" alt="Review image">
+                </article>
+                <button type="button" class="pdp-rev-next" aria-label="다음 리뷰"></button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 8. You May Also Like -->
+    <section class="pdp-sec pdp-rel">
+        <div class="pdp-rel-side">
+        <h2 class="title pdp-h">You May Also Like</h2>
+            <div class="pdp-rel-nav">
+                <button type="button" class="pdp-arrow prev" aria-label="이전"></button>
+                <button type="button" class="pdp-arrow next" aria-label="다음"></button>
+            </div>
+        </div>
+        <div class="pdp-rel-list">
+        <!-- 카드 = index.css 공통 상품 카드 -->
+        <article class="product-card">
+            <div class="product-thumb">
+                <button class="heart" aria-label="wishlist"><img src="./images/icons/wish.png" alt="wishlist"></button>
+                <img class="product-img" src="./images/rel_01.jpg" alt="Eames Turned Stool">
+            </div>
+            <div class="product-info">
+                <p class="product-name">Eames Turned Stool</p>
+                <div class="product-price-group">
+                    <span class="product-price-bf">$1,095.00 - $1,420.00</span>
+                    <span class="product-price">$821.25 - $1,065.00</span>
+                    <span class="sale-badge">25% off</span>
+                </div>
+            </div>
+        </article>
+        <article class="product-card">
+            <div class="product-thumb">
+                <button class="heart" aria-label="wishlist"><img src="./images/icons/wish.png" alt="wishlist"></button>
+                <img class="product-img" src="./images/rel_02.jpg" alt="Nelson Ball Bubble Pendant">
+            </div>
+            <div class="product-info">
+                <p class="product-name">Nelson Ball Bubble Pendant</p>
+                <div class="product-price-group">
+                    <span class="product-price-bf">$620.00 - $815.00</span>
+                    <span class="product-price">$465.00 - $813.75</span>
+                    <span class="sale-badge">25% off</span>
+                </div>
+            </div>
+        </article>
+        <article class="product-card">
+            <div class="product-thumb">
+                <button class="heart" aria-label="wishlist"><img src="./images/icons/wish.png" alt="wishlist"></button>
+                <img class="product-img" src="./images/rel_03.jpg" alt="Eames Molded Plywood Dining Chair">
+            </div>
+            <div class="product-info">
+                <p class="product-name">Eames Molded Plywood Dining Chair Metal Base</p>
+                <div class="product-price-group">
+                    <span class="product-price-bf">$1,295.00 - $1,645.00</span>
+                    <span class="product-price">$971.25 - $1,233.75</span>
+                    <span class="sale-badge">25% off</span>
+                </div>
+            </div>
+        </article>
+        </div>
+    </section>
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-top">
+                <div>
+                    <h4>Newsletter — Sign Up</h4>
+                    <p>Be the first to know about Herman Miller special offers, new product launches, and events.</p>
+                    <form class="newsletter-form" onsubmit="return false;">
+                        <input type="email" placeholder="yourname@example.com">
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <div class="footer-social">
+                        <a href="#instagram"><img src="./images/icons/insta.png" alt=""></a>
+                        <a href="#facebook"><img src="./images/icons/facebook.png" alt=""></a>
+                        <a href="#pinterest"><img src="./images/icons/pinterest.png" alt=""></a>
+                        <a href="#youtube"><img src="./images/icons/youtube.png" alt=""></a>
+                        <a href="#twitter"><img src="./images/icons/twitter.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                    <li><a href="#living">Living Room</a></li>
+                    <li><a href="#dining">Dining</a></li>
+                    <li><a href="#lighting">Lighting</a></li>
+                    <li><a href="#sale">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#designers">Our Designers</a></li>
+                    <li><a href="#collections">Our Collections</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#shipping">Shipping &amp; Returns</a></li>
+                    <li><a href="#warranty">Warranty</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-logo"><img src="./images/logo_footer.png" alt="logo"></div>
+                <span>© 2026 Herman Miller — Redesign Concept</span>
+                <a href="#privacy">Privacy Notice</a>
+                <a href="#terms">Terms of Sale</a>
+                <a href="#cookies">Cookie Settings</a>
+            </div>
+        </div>
+    </footer>
+</main>

@@ -45,7 +45,7 @@ html, body {
 }
 
 .topbar .left, .topbar .right{ display:flex; gap:24px; align-items:center; }
-.topbar .logo{ display:flex; align-items:center; gap:8px; font-weight:700; font-size:15px; color:var(--signal); }
+.topbar .logo{position:absolute; left:50%; transform:translateX(-50%);}
 .topbar .logo img{ height:20px; }
 .icon-btn img{ width:24px; height:24px; display:block; }
 .icon-btn{ background:none; border:none; cursor:pointer; padding:0; }
