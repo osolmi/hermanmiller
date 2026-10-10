@@ -64,18 +64,19 @@
     <!-- 1. 히어로: 3D 고정 스테이지(드래그=회전) + 우측 블리드 스트립(드래그=가로 스크롤) -->
     <div class="pdp-hero">
         <div class="pdp-stage">
-            <model-viewer src="./images/product/lcw.glb" poster="./images/product/lcw_01.png"
+            <model-viewer src="./images/product/lcw.glb" poster="./images/product/lcw_02.jpg"
             alt="Eames Molded Plywood Lounge Chair Wood Base 3D"
             camera-controls touch-action="pan-y"
             interaction-prompt="auto" shadow-intensity="1"
             loading="lazy" reveal="interaction"></model-viewer>
         </div>
         <div class="pdp-strip">
-            <div class="pdp-slide"><img src="./images/product/lcw_02.jpg" alt="Eames LCW in a living room"></div>
-            <div class="pdp-slide"><img src="https://images.hermanmiller.group/asset/697e87bd-1960-4c3d-9704-238df37c26e4/W/HM_MoMA_Eames_LCW_v2_2274.png?trim=auto&trim-sd=1&blend-mode=darken&blend=fafafa&bg=fafafa&auto=format&w=1000&q=70&h=1000" alt="Eames LCW close-up with objects"></div>
-            <div class="pdp-slide"><img src="https://images.hermanmiller.group/asset/5931c7ea-9cfc-4195-91ca-f2d7558134cd/W/HM_1378_675949_redstain_v2_0680_MAIN.png?trim=auto&trim-sd=1&blend-mode=darken&blend=fafafa&bg=fafafa&auto=format&w=1000&q=70&h=1000" alt="Eames LCW scale"></div>
             <div class="pdp-slide"><img src="https://images.hermanmiller.group/asset/1e284c03-05d8-4b87-b188-fc4a62a313af/W/HM_1378_100099860_denim_walnut_v1_079.png?trim=auto&trim-sd=1&blend-mode=darken&blend=fafafa&bg=fafafa&auto=format&w=1000&q=70&h=1000" alt="Eames LCW interior"></div>
+            <div class="pdp-slide"><img src="https://images.hermanmiller.group/asset/927e9a62-5091-4ee0-9b76-4e919b5f72f2/W/HM_Bellport_18_Living_Detail_EamesMoldedChair_018_Hero_20181120143003763.png?trim=auto&trim-sd=1&blend-mode=darken&blend=fafafa&bg=fafafa&auto=format&w=1000&q=70&h=1000" alt="Eames LCW interior"></div>
+            <div class="pdp-slide"><img src="https://images.hermanmiller.group/asset/5931c7ea-9cfc-4195-91ca-f2d7558134cd/W/HM_1378_675949_redstain_v2_0680_MAIN.png?trim=auto&trim-sd=1&blend-mode=darken&blend=fafafa&bg=fafafa&auto=format&w=1000&q=70&h=1000" alt="Eames LCW scale"></div>
+            <div class="pdp-slide"><img src="https://images.hermanmiller.group/asset/44a49943-2328-4cad-bb04-d9b671597ed9/W/HM_1378_100101898_white_ash_lichen_v1_001.png?trim=auto&trim-sd=1&blend-mode=darken&blend=fafafa&bg=fafafa&auto=format&w=400&h=400q=90" alt="Eames LCW interior"></div>
         </div>
+        <div class="pdp-bar" aria-hidden="true"><i></i></div>
     </div>
     
     <!-- 2. 제품명 / 가격 / 구매 -->
@@ -162,7 +163,7 @@
         <div class="pdp-rev">
             <div class="pdp-score">
                 <div>
-                <p><b>4.8</b><span>/5</span></p>
+                <p><b>4.8</b><span>/ 5</span></p>
                 <small>76 Reviews</small>
                 </div>
                 <ul class="pdp-bars" aria-label="별점 분포">
@@ -175,14 +176,24 @@
             </div>
             <div class="pdp-rev-wrap">
                 <article class="pdp-review">
-                    <div>
-                        <p class="stars" aria-label="5 stars">★★★★★</p>
-                        <h3>Surprisingly comfortable</h3>
-                        <p>This chair has to be the most comfortable ever. Such a simple design of molded plywood and yet you feel supported and relaxed. It is always such a privilege to have an Eames' design in the home.</p>
+                    <div class="pdp-review-content">
+                        <p class="stars" aria-label="5 stars">
+                            <img src="images/icons/star.png" alt="star">
+                            <img src="images/icons/star.png" alt="star">
+                            <img src="images/icons/star.png" alt="star">
+                            <img src="images/icons/star.png" alt="star">
+                            <img src="images/icons/star.png" alt="star">
+                        </p>
+                        <div class="pdp-review-text">
+                            <h3>Surprisingly comfortable</h3>
+                            <p>This chair has to be the most comfortable ever. Such a simple design of molded plywood and yet you feel supported and relaxed. It is always such a privilege to have an Eames' design in the home.</p>
+                        </div>
                     </div>
                     <img src="images/product/review_01.jpg" alt="Review image">
                 </article>
-                <button type="button" class="pdp-rev-next" aria-label="다음 리뷰"></button>
+                <button type="button" class="pdp-rev-next" aria-label="다음 리뷰">
+                    <img src="./images/icons/right.png" alt="다음">
+                </button>
             </div>
         </div>
     </section>
@@ -192,8 +203,12 @@
         <div class="pdp-rel-side">
         <h2 class="title pdp-h">You May Also Like</h2>
             <div class="pdp-rel-nav">
-                <button type="button" class="pdp-arrow prev" aria-label="이전"></button>
-                <button type="button" class="pdp-arrow next" aria-label="다음"></button>
+                <button type="button" class="pdp-arrow prev" aria-label="이전">
+                    <img src="./images/icons/left_white.png" alt="이전">
+                </button>
+                <button type="button" class="pdp-arrow next" aria-label="다음">
+                    <img src="./images/icons/right_white.png" alt="다음">
+                </button>
             </div>
         </div>
         <div class="pdp-rel-list">
@@ -201,13 +216,13 @@
         <article class="product-card">
             <div class="product-thumb">
                 <button class="heart" aria-label="wishlist"><img src="./images/icons/wish.png" alt="wishlist"></button>
-                <img class="product-img" src="./images/rel_01.jpg" alt="Eames Turned Stool">
+                <img class="product-img" src="./images/md/4.png" alt="Eames Turned Stool">
             </div>
             <div class="product-info">
-                <p class="product-name">Eames Turned Stool</p>
+                <p class="product-name">Eames Molded Fiberglass Armchair</p>
                 <div class="product-price-group">
-                    <span class="product-price-bf">$1,095.00 - $1,420.00</span>
-                    <span class="product-price">$821.25 - $1,065.00</span>
+                    <span class="product-price-bf">$695.00 - $890.00</span>
+                    <span class="product-price">$521.25 - $667.50</span>
                     <span class="sale-badge">25% off</span>
                 </div>
             </div>
@@ -215,13 +230,13 @@
         <article class="product-card">
             <div class="product-thumb">
                 <button class="heart" aria-label="wishlist"><img src="./images/icons/wish.png" alt="wishlist"></button>
-                <img class="product-img" src="./images/rel_02.jpg" alt="Nelson Ball Bubble Pendant">
+                <img class="product-img" src="./images/bs/coffee_1.png" alt="Nelson Ball Bubble Pendant">
             </div>
             <div class="product-info">
-                <p class="product-name">Nelson Ball Bubble Pendant</p>
+                <p class="product-name">Noguchi Table</p>
                 <div class="product-price-group">
-                    <span class="product-price-bf">$620.00 - $815.00</span>
-                    <span class="product-price">$465.00 - $813.75</span>
+                    <span class="product-price-bf">$2,895.00 - $3,195.00</span>
+                    <span class="product-price">$2,171.25 - $2,396.25</span>
                     <span class="sale-badge">25% off</span>
                 </div>
             </div>
@@ -229,10 +244,52 @@
         <article class="product-card">
             <div class="product-thumb">
                 <button class="heart" aria-label="wishlist"><img src="./images/icons/wish.png" alt="wishlist"></button>
-                <img class="product-img" src="./images/rel_03.jpg" alt="Eames Molded Plywood Dining Chair">
+                <img class="product-img" src="./images/md/3.png" alt="Eames Molded Plywood Dining Chair">
             </div>
             <div class="product-info">
-                <p class="product-name">Eames Molded Plywood Dining Chair Metal Base</p>
+                <p class="product-name">Eames Molded Plywood Dining Chair Metal Base (DCM)</p>
+                <div class="product-price-group">
+                    <span class="product-price-bf">$1,295.00 - $1,645.00</span>
+                    <span class="product-price">$971.25 - $1,233.75</span>
+                    <span class="sale-badge">25% off</span>
+                </div>
+            </div>
+        </article>
+        <article class="product-card">
+            <div class="product-thumb">
+                <button class="heart" aria-label="wishlist"><img src="./images/icons/wish.png" alt="wishlist"></button>
+                <img class="product-img" src="./images/md/3.png" alt="Eames Molded Plywood Dining Chair">
+            </div>
+            <div class="product-info">
+                <p class="product-name">Eames Molded Plywood Dining Chair Metal Base (DCM)</p>
+                <div class="product-price-group">
+                    <span class="product-price-bf">$1,295.00 - $1,645.00</span>
+                    <span class="product-price">$971.25 - $1,233.75</span>
+                    <span class="sale-badge">25% off</span>
+                </div>
+            </div>
+        </article>
+        <article class="product-card">
+            <div class="product-thumb">
+                <button class="heart" aria-label="wishlist"><img src="./images/icons/wish.png" alt="wishlist"></button>
+                <img class="product-img" src="./images/md/3.png" alt="Eames Molded Plywood Dining Chair">
+            </div>
+            <div class="product-info">
+                <p class="product-name">Eames Molded Plywood Dining Chair Metal Base (DCM)</p>
+                <div class="product-price-group">
+                    <span class="product-price-bf">$1,295.00 - $1,645.00</span>
+                    <span class="product-price">$971.25 - $1,233.75</span>
+                    <span class="sale-badge">25% off</span>
+                </div>
+            </div>
+        </article>
+        <article class="product-card">
+            <div class="product-thumb">
+                <button class="heart" aria-label="wishlist"><img src="./images/icons/wish.png" alt="wishlist"></button>
+                <img class="product-img" src="./images/md/3.png" alt="Eames Molded Plywood Dining Chair">
+            </div>
+            <div class="product-info">
+                <p class="product-name">Eames Molded Plywood Dining Chair Metal Base (DCM)</p>
                 <div class="product-price-group">
                     <span class="product-price-bf">$1,295.00 - $1,645.00</span>
                     <span class="product-price">$971.25 - $1,233.75</span>
